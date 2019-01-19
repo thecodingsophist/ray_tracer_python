@@ -4,8 +4,8 @@ import math
 class Vector():
 #initialize vector with vector data tuple 'e' with 3 items, otherwise, the default vector_data is None
     def __init__(self, e0 = None, e1 = None, e2 = None ):
-        #e is a tuple
-        self.e = (e0, e1, e2)
+        #e is a NOT TUPLE but LIST
+        self.e = [e0, e1, e2]
         #define variables that will be used throughout
         self.x = self.e[0]
         self.y = self.e[1]
