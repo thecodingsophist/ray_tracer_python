@@ -43,12 +43,15 @@ def main():
     for j in range(ny-1, 0, -1):
         for i in range(nx):
             u = i/nx
-            #print("u: " + str(u))
+            print("u: " + str(u))
             v = j/ny
-            #print("v: " + str(v))
+            print("v: " + str(v))
 
             #calculates the direction of the ray
             horizontal = multiply_by_float(u, horizontal)
+            print("horizontal r" + str(horizontal.get_r()))
+            print("horizontal b" + str(horizontal.get_b()))
+            print("horizontal g" + str(horizontal.get_g()))
             print("horizontal")
             horizontal.print_properties_space()
 
