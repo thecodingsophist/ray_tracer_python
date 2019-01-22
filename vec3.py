@@ -33,11 +33,13 @@ class Vector():
         return self.b
 
     def print_properties_no_space(self):
-        info = "%d%d%d" %(self.e[0], self.e[1], self.e[2])
+        info = "%s%s%s" %(self.e[0], self.e[1], self.e[2])
+        print(info)
         return info
 
     def print_properties_space(self):
-        info = "%d %d %d" %(self.e[0], self.e[1], self.e[2])
+        info = "%s %s %s" %(self.e[0], self.e[1], self.e[2])
+        print(info)
         return info
 
     def length(self):

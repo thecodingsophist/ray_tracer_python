@@ -16,6 +16,7 @@ def color(ray):
     z = ray_direction_unit_vector.z
 
     unit_direction = Vector(x, y, z)
+    # unit_direction.print_properties_space()
     y = unit_direction.get_y()
     t = 0.5*(y + 1.0)
     vector_A = Vector(1.0, 1.0, 1.0)
@@ -47,20 +48,26 @@ def main():
             #print("v: " + str(v))
 
             #calculates the direction of the ray
-            horizontal = horizontal.multiply_by_float(u)
-            vertical = vertical.multiply_by_float(v)
+            horizontal = multiply_by_float(u, horizontal)
+            print("horizontal")
+            horizontal.print_properties_space()
+
+            vertical = multiply_by_float(v, vertical)
+            print("vertical")
+            vertical.print_properties_space()
+
             sum_of_horizontal_and_vertical = add_two_vectors(horizontal, vertical)
             direction = add_two_vectors(lower_left_corner, sum_of_horizontal_and_vertical)
 
             r = Ray(origin, direction)
             col = color(r)
-            # ir = int(255.99*col.r)
-            # ig = int(255.99*col.g)
-            # ib = int(255.99*col.b)
+            ir = int(255.99*col.r)
+            ig = int(255.99*col.g)
+            ib = int(255.99*col.b)
 
-            ir = 255.99*col.r
-            ig = 255.99*col.g
-            ib = 255.99*col.b
+            # ir = 255.99*col.r
+            # ig = 255.99*col.g
+            # ib = 255.99*col.b
 
             f.write("%d %d %d\n" %(ir, ig, ib))
 

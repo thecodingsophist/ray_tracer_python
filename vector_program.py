@@ -50,13 +50,14 @@ def multiply_vectors_by_constant(constant, vector_1):
     vector_2 = Vector(vector_2_e0, vector_2_e1, vector_2_e2)
     return vector_2
 
-def multiply_by_float(float, vector_1):
+def multiply_by_float(n, vector_1):
 
-    vector_2_e0 = float * vector_1.e[0]
-    vector_2_e1 = float * vector_1.e[1]
-    vector_2_e2 = float * vector_1.e[2]
+    vector_2_e0 = n * float(vector_1.e[0])
+    vector_2_e1 = n * float(vector_1.e[1])
+    vector_2_e2 = n * float(vector_1.e[2])
 
     vector_2 = Vector(vector_2_e0, vector_2_e1, vector_2_e2)
+
     return vector_2
 
 #THIS METHOD ALREADY EXISTS IN VEC3
