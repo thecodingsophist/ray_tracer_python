@@ -14,6 +14,24 @@ class Vector():
         self.g = self.e[1]
         self.b = self.e[2]
 
+    def get_x(self):
+        return self.x
+
+    def get_y(self):
+        return self.y
+
+    def get_z(self):
+        return self.z
+
+    def get_r(self):
+        return self.r
+
+    def get_g(self):
+        return self.g
+
+    def get_b(self):
+        return self.b
+
     def print_properties_no_space(self):
         info = "%d%d%d" %(self.e[0], self.e[1], self.e[2])
         return info
@@ -23,16 +41,19 @@ class Vector():
         return info
 
     def length(self):
-        return math.sqrt((e[0]*e[0] + e[1]*e[1] + e[2]*e[2]))
+        return math.sqrt((self.e[0]*self.e[0] + self.e[1]*self.e[1] + self.e[2]*self.e[2]))
 
     def squared_length(self):
-        return e[0]*e[0] + e[1]*e[1] + e[2]*e[2]
+        return self.e[0]*self.e[0] + self.e[1]*self.e[1] + self.e[2]*self.e[2]
 
     def make_unit_vector(self):
+        #print("length: " + str(self.length()))
         k = 1/self.length()
+        #print("k: " + str(k))
         self.e[0] *= k
         self.e[1] *= k
         self.e[2] *= k
+        return self
 
     def add_by_vector(self, v):
         self.e[0] += v.e[0]
